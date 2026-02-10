@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BỐ HÀNH HẠ TÔI SUỐT 20 NĂM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.9;
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #c00;
+      background-image: radial-gradient(circle at center, #100 0%, #000 70%);
+      overflow-x: hidden;
+    }
+    h1.main-title {
+      font-family: 'Nosifer', cursive;
+      text-align: center;
+      font-size: 5em;
+      color: #ff0000;
+      text-shadow: 0 0 30px #f00, 0 0 60px #800, 0 0 90px #400;
+      margin: 50px 0 30px;
+      animation: glitch 2.5s infinite;
+    }
+    @keyframes glitch {
+      0% { transform: translate(0); text-shadow: 4px 4px #0ff, -4px -4px #f0f; }
+      10% { transform: translate(-2px, 2px); text-shadow: -4px 4px #0ff, 4px -4px #f0f; }
+      20% { transform: translate(2px, -2px); }
+      100% { transform: translate(0); text-shadow: 0 0 #f00; }
+    }
+    .chapter {
+      display: none;
+      padding: 100px 80px;
+      max-width: 1100px;
+      margin: 0 auto 100px;
+      background: rgba(5,0,0,0.92);
+      border: 3px solid #600;
+      box-shadow: inset 0 0 40px #300, 0 0 50px #800;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .chapter.active { display: block; animation: fadeIn 1.5s; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    h2.chap-title {
+      font-family: 'Creepster', cursive;
+      font-size: 4.2em;
+      color: #ff2200;
+      text-align: center;
+      margin: 80px 0 60px;
+      text-shadow: 0 0 25px #f00, 0 0 50px #800;
+      animation: flicker 5s infinite alternate;
+    }
+    @keyframes flicker {
+      0%,18%,22%,25%,53%,57%,100% { opacity:1; text-shadow:0 0 20px #f00; }
+      20%,24%,55% { opacity:0.3; text-shadow:none; }
+    }
+    .content {
+      font-size: 1.4em;
+      color: #ddd;
+      letter-spacing: 0.8px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .blood-line {
+      font-size: 3em;
+      color: #800;
+      margin: 100px 0;
+      animation: pulseBlood 4s infinite;
+    }
+    @keyframes pulseBlood {
+      0%,100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.08); }
+    }
+    .nav {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      background: rgba(0,0,0,0.9);
+      padding: 15px 50px;
+      border-radius: 50px;
+      border: 2px solid #800;
+      box-shadow: 0 0 30px #f00;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    button {
+      width: 120px;
+      height: 120px;
+      background: #300;
+      color: #f00;
+      border: 4px solid #900;
+      border-radius: 50%;  /* Làm tròn hoàn toàn */
+      font-size: 1.3em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 15px #600;
+    }
+    button:hover {
+      background: #600;
+      transform: scale(1.2);
+      box-shadow: 0 0 40px #f00, inset 0 0 20px #f00;
+      border-color: #f00;
+    }
+    button:disabled {
+      opacity: 0.2;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="nav">
+  <button onclick="prevChap()">←</button>
+  <span id="chapNum">CHƯƠNG 1 / 10</span>
+  <button onclick="nextChap()">→</button>
+</div>
+
+<h1 class="main-title">BỐ HÀNH HẠ TÔI SUỐT 20 NĂM</h1>
+
+<div id="c1" class="chapter active">
+  <h2 class="chap-title">CHƯƠNG 1: NGÔI NHÀ KHÔNG CÓ TIẾNG CƯỜI</h2>
+  <div class="content">
+    <p>Tôi lớn lên trong một ngôi nhà luôn đóng cửa. Không phải vì sợ trộm, mà vì sợ tiếng ồn. Tiếng ồn làm bố tôi khó chịu. Tiếng cười, tiếng chạy chân trần, tiếng thìa chạm bát – tất cả đều có thể trở thành cái cớ.
+
+Tôi không nhớ lần đầu tiên bị bố đánh là khi nào. Ký ức sớm nhất chỉ là cảm giác: một nỗi sợ mơ hồ như khói, len vào phổi, khiến tôi không thở sâu được. Khi còn rất nhỏ, tôi nghĩ bố cũng giống như thời tiết – có ngày nắng, có ngày mưa – và nhiệm vụ của tôi là đoán trước cơn giông để trốn đi kịp lúc.
+
+Bố tôi không phải lúc nào cũng đánh. Điều đó còn đáng sợ hơn. Có những ngày ông im lặng, mặt lạnh như tường xi măng, đi lại trong nhà mà không phát ra tiếng. Những ngày đó, tôi học cách thu nhỏ bản thân: bước nhẹ hơn, nói khẽ hơn, thậm chí thở cũng dè chừng. Tôi học được rằng tồn tại thôi cũng có thể là một lỗi.
+
+Mẹ tôi ít nói. Bà luôn bận rộn với việc lau dọn, nấu ăn, sắp xếp lại những thứ vốn đã gọn gàng. Tôi từng nghĩ mẹ rất sạch sẽ. Sau này tôi mới hiểu: bà đang dọn dẹp dấu vết. Dấu vết của những lần bát đĩa bị hất xuống, của những buổi tối kết thúc bằng tiếng khóc nghẹn, của những câu nói không bao giờ được nói hết.
+
+Khi tôi sáu tuổi, tôi bắt đầu biết sợ bóng tối. Không phải vì ma quỷ, mà vì bóng tối làm tôi không nhìn thấy mặt bố. Không nhìn thấy thì không đoán được tâm trạng. Không đoán được thì không biết mình sắp sai ở đâu.
+
+Có lần tôi làm đổ bát cơm. Chỉ là một bát cơm. Tôi đứng chết lặng, nhìn những hạt gạo trắng văng ra sàn như tuyết rơi. Trong đầu tôi không phải là “bố sẽ đánh mình”, mà là “mình đã làm hỏng bữa tối”. Tôi cúi xuống nhặt, tay run đến mức không cầm nổi thìa. Bố đứng đó, rất lâu. Không nói gì. Chính sự im lặng ấy mới là hình phạt đầu tiên.
+
+Sau lần đó, tôi bắt đầu tập luyện. Tôi tập đặt bát xuống thật chậm. Tập ăn không phát ra tiếng. Tập nuốt nước mắt vào trong. Tôi nghĩ nếu mình đủ ngoan, đủ cẩn thận, đủ vô hình, thì mọi chuyện sẽ ổn.
+
+Nhưng bạo lực không cần lý do. Nó chỉ cần quyền lực.
+
+Bố tôi luôn nói tôi vô dụng. Rằng tôi sinh ra đã là gánh nặng. Rằng nếu không có tôi, cuộc đời ông đã khác. Tôi không hiểu “cuộc đời khác” là như thế nào, nhưng tôi tin ông. Tôi tin từng lời, vì trẻ con luôn tin người lớn.
+
+Ở trường, tôi học rất giỏi. Không phải vì thông minh, mà vì sợ về nhà. Tôi kéo dài thời gian ở lớp, ở thư viện, ở bất cứ nơi nào không có bố. Khi được khen, tôi không vui. Tôi chỉ lo: nếu bố biết, liệu đó có trở thành một lý do mới?
+
+Ngôi nhà của tôi không có tiếng cười. Nó chỉ có đồng hồ treo tường, tích tắc như đếm ngược. Tôi lớn lên trong tiếng tích tắc đó, từng giây một, học cách chờ đợi – chờ cho mọi thứ qua đi, dù không biết “qua đi” là bao giờ.
+
+Tôi không biết rằng, đó mới chỉ là bắt đầu.</p>
+  </div>
+  <div class="blood-line">… MẤT ĐI NỤ CƯỜI …</div>
+</div>
+
+<div id="c2" class="chapter">
+  <h2 class="chap-title">CHƯƠNG 2: NHỮNG ĐIỀU KHÔNG AI DẠY</h2>
+  <div class="content">
+    <p>Tôi nhận ra nhà mình khác những ngôi nhà khác vào một buổi chiều mưa, khi tôi bảy tuổi. Hôm đó, tôi được sang nhà bạn cùng lớp làm bài tập nhóm. Cửa nhà bạn mở toang, mùi canh nóng lan ra tận hành lang. Bố bạn cười lớn khi thấy chúng tôi lục đục bước vào, tiếng cười vang lên tự nhiên như thể nó vốn dĩ phải tồn tại trong một ngôi nhà.
+
+Tôi đứng sững lại, tay bám chặt quai cặp. Tim tôi đập nhanh không phải vì sợ, mà vì bối rối. Tôi không biết phải phản ứng thế nào trước một người bố đang cười.
+
+Trong bữa ăn, bạn tôi làm rơi đũa. Âm thanh va xuống bàn rất rõ. Tôi giật mình, cả người căng cứng, chờ đợi điều sẽ xảy ra tiếp theo. Nhưng không có gì cả. Bố bạn chỉ nói: “Cẩn thận nhé,” rồi gắp thêm thức ăn cho con. Không ai im lặng. Không ai nín thở. Không có ánh mắt nào biến thành dao.
+
+Tôi ăn mà không cảm thấy vị gì. Trong đầu tôi, một câu hỏi lặp đi lặp lại: Tại sao ở đây thì được, còn ở nhà mình thì không?
+
+Tối hôm đó, tôi về nhà muộn hơn thường lệ. Bố ngồi ở bàn, lưng quay về phía cửa. Tôi biết ngay mình đã sai, dù chưa kịp làm gì. Tôi đứng yên, không dám tháo giày. Không gian trong nhà đặc quánh, như thể ai đó đã rút hết không khí ra ngoài.
+
+“Đi đâu?” bố hỏi, giọng đều đều.
+
+Tôi trả lời. Chỉ vài từ. Nhưng ông nghe ra điều gì đó khác. Có lẽ là mùi thức ăn lạ trên áo tôi, hay ánh mắt tôi còn chưa kịp thu lại sau một buổi tối hiếm hoi không sợ hãi.
+
+“Nhà người ta vui lắm à?” ông hỏi tiếp.
+
+Tôi không trả lời. Tôi học được từ rất sớm rằng im lặng đôi khi là cách an toàn nhất. Nhưng tối đó, im lặng cũng không cứu được tôi. Tôi không nhớ rõ chuyện sau đó diễn ra thế nào, chỉ nhớ cảm giác xấu hổ len lỏi nhiều hơn cả đau đớn. Như thể tôi đã phạm tội chỉ vì biết rằng thế giới ngoài kia tồn tại một kiểu gia đình khác.
+
+Từ hôm ấy, tôi bắt đầu quan sát nhiều hơn. Ở trường, tôi nhìn cách bạn bè nói chuyện với bố mẹ. Tôi nghe những lời cằn nhằn rất nhẹ, những câu mắng yêu, những cái xoa đầu. Tôi ghi nhớ tất cả như học một ngôn ngữ mới – một ngôn ngữ tôi không được phép sử dụng.
+
+Tôi cũng bắt đầu hiểu rằng không phải nhà nào cũng như nhà mình. Và nhận thức đó không mang lại hy vọng. Nó chỉ làm nỗi đau có hình dạng rõ ràng hơn.
+
+Mẹ tôi biết. Tôi tin là mẹ biết. Có những tối bà lén đặt tay lên vai tôi, rất khẽ, như sợ làm vỡ tôi ra. Nhưng bà không nói gì. Sự im lặng của mẹ khác với sự im lặng của bố. Nó mềm hơn, run rẩy hơn, nhưng cũng bất lực hơn.
+
+Có lần tôi hỏi mẹ: “Con có hư không?”
+Mẹ nhìn tôi rất lâu, rồi quay đi. Câu trả lời nằm trong khoảng trống đó.
+
+Tôi bắt đầu mơ những giấc mơ lặp lại. Trong mơ, tôi chạy trong một hành lang dài, cửa nào cũng khóa. Phía sau là tiếng bước chân quen thuộc, không cần nhìn cũng biết là ai. Tôi tỉnh dậy với mồ hôi ướt lưng, tim đập loạn xạ, nhưng ngoài kia trời vẫn sáng. Tôi tự nhủ: Chỉ là mơ thôi. Nhưng cơ thể tôi không tin.
+
+Tôi học được một điều không ai dạy: nỗi sợ có thể lớn lên cùng bạn. Nó không biến mất khi bạn mở mắt, cũng không tan đi khi bạn cố quên. Nó ở đó, âm thầm, dạy bạn cách cúi đầu, cách xin lỗi trước cả khi mắc lỗi, cách tồn tại sao cho ít gây phiền toái nhất.
+
+Tôi mới bảy tuổi, nhưng tôi đã hiểu: có những ngôi nhà không nuôi dưỡng con người. Chúng chỉ giữ họ lại.</p>
+  </div>
+  <div class="blood-line">… KHOẢNG TRỐNG TĨNH LẶNG …</div>
+</div>
+
+<div id="c3" class="chapter">
+  <h2 class="chap-title">CHƯƠNG 3: THÓI QUEN CỦA SỰ CHỊU ĐỰNG</h2>
+  <div class="content">
+    <p>Lên chín tuổi, tôi không còn khóc nhiều nữa. Không phải vì tôi mạnh mẽ hơn, mà vì nước mắt dần trở nên vô dụng. Khóc không làm mọi thứ dừng lại. Khóc chỉ khiến tôi mệt hơn, đau đầu hơn, và khiến bố khó chịu hơn. Thế là tôi học cách giữ nước mắt ở một nơi rất sâu, nơi ngay cả tôi cũng hiếm khi chạm tới.
+
+Những năm tiểu học trôi qua như một đường thẳng đều đều. Sáng đến trường, chiều về nhà, tối ngồi học bài trong im lặng. Tôi luôn làm bài rất nhanh. Không phải để được khen, mà để tránh kéo dài thời gian ở bàn ăn, nơi mọi sai sót đều có thể bị soi mói. Tôi viết chữ ngay ngắn, không tẩy xóa. Tôi sợ những vết bẩn nhỏ cũng có thể trở thành bằng chứng cho việc tôi “cẩu thả”.
+
+Bố tôi bắt đầu kiểm tra bài vở thường xuyên hơn. Ông không quan tâm tôi hiểu bài hay không. Ông chỉ quan tâm đến điểm số. Một con số thấp hơn mong đợi đồng nghĩa với ánh mắt tối sầm lại. Tôi không còn cảm thấy sợ điểm kém, tôi sợ khoảnh khắc đưa tờ giấy cho bố xem. Tay tôi thường lạnh ngắt, dù trời nóng hay lạnh cũng vậy.
+
+Mẹ vẫn ở đó, lặng lẽ. Bà thường đứng gần cửa phòng khi bố tôi nói chuyện với tôi, như thể chỉ cần đứng gần hơn một chút là có thể bảo vệ được điều gì đó. Nhưng bà không chen vào. Tôi không trách mẹ, vì tôi thấy sự sợ hãi trong mắt bà giống hệt trong mắt mình. Chúng tôi giống nhau ở điểm đó: đều đang cố sống sót theo cách ít gây tổn hại nhất.
+
+Tôi bắt đầu có một thói quen kỳ lạ: xin lỗi. Tôi xin lỗi cho mọi thứ. Xin lỗi vì về nhà muộn năm phút. Xin lỗi vì làm rơi cây bút. Xin lỗi vì đứng sai chỗ. Có những lúc tôi xin lỗi mà không biết mình đã làm gì sai. Nhưng câu xin lỗi cho tôi cảm giác như một lá chắn mỏng manh, dù tôi biết nó không luôn có tác dụng.
+
+Ở trường, thầy cô khen tôi ngoan, trầm, lễ phép. Họ nói tôi “chín chắn hơn tuổi”. Tôi mỉm cười khi nghe điều đó, nhưng trong lòng trống rỗng. Tôi không muốn chín chắn. Tôi muốn được vô tư. Tôi muốn được ồn ào mà không phải trả giá. Nhưng những mong muốn đó dần trở nên xa xỉ, như một thứ chỉ tồn tại trong sách truyện.
+
+Tôi không kể cho ai nghe chuyện ở nhà. Không phải vì tôi không muốn, mà vì tôi không biết bắt đầu từ đâu. Làm sao để giải thích rằng bố bạn không giống bố tôi? Làm sao để nói rằng nỗi sợ không phải là một khoảnh khắc, mà là một trạng thái kéo dài? Tôi sợ nếu nói ra, người ta sẽ không tin. Hoặc tệ hơn, họ sẽ tin rồi bỏ đi, để tôi ở lại một mình với hậu quả.
+
+Có lần tôi thử phản kháng. Chỉ là một câu trả lời chậm hơn bình thường, một ánh mắt không cúi đủ thấp. Kết quả đến ngay lập tức. Sau lần đó, tôi hiểu ra một điều: phản kháng không phải lúc nào cũng là hét lên hay bỏ chạy. Đôi khi, phản kháng duy nhất bạn có thể làm là tiếp tục tồn tại.
+
+Tối nào trước khi ngủ, tôi cũng nằm nghe tiếng động trong nhà. Tiếng bước chân, tiếng mở cửa, tiếng ghế xê dịch. Tôi phân loại chúng trong đầu, như một hệ thống báo động. Âm thanh nào an toàn, âm thanh nào nguy hiểm. Cơ thể tôi luôn trong trạng thái sẵn sàng, ngay cả khi tôi ngủ.
+
+Tôi mười một tuổi khi nhận ra mình không còn nhớ cảm giác được ôm là như thế nào. Không phải là cái ôm xã giao, mà là cái ôm khiến bạn thấy mình không cần phải đề phòng. Ý nghĩ đó khiến ngực tôi đau nhói, nhưng tôi nhanh chóng gạt đi. Đau đớn, suy cho cùng, cũng chỉ là một phần của thói quen.
+
+Và thói quen thì rất khó bỏ.</p>
+  </div>
+  <div class="blood-line">… VƯỢT QUÁ GIỚI HẠN …</div>
+</div>
+
+<div id="c4" class="chapter">
+  <h2 class="chap-title">CHƯƠNG 4: NHỮNG VẾT NỨT KHÔNG AI THẤY</h2>
+  <div class="content">
+    <p>Tuổi dậy thì đến với tôi không bằng những thay đổi ồn ào, mà bằng sự mệt mỏi. Một kiểu mệt nằm sâu trong xương, khiến tôi thức dậy đã thấy kiệt sức, dù đêm qua không làm gì cả. Cơ thể tôi lớn lên, nhưng nỗi sợ cũng lớn theo, như một cái bóng không chịu rời.
+
+Bố tôi bắt đầu khắt khe hơn. Có lẽ ông không quen với việc tôi cao lên, giọng nói trầm hơn, ánh mắt không còn hoàn toàn cúi xuống như trước. Mỗi thay đổi nhỏ trên cơ thể tôi dường như là một sự thách thức vô hình đối với ông. Ông không nói ra, nhưng tôi cảm nhận được điều đó qua cách ông nhìn, qua những lời chê trách ngày càng cay nghiệt.
+
+“Lớn rồi mà chẳng ra gì,” ông nói.
+Câu đó lặp lại nhiều đến mức nó trở thành một phần trong suy nghĩ của tôi.
+
+Tôi bắt đầu giấu mình trong phòng nhiều hơn. Không phải để nổi loạn, mà để thu mình lại. Phòng tôi trống, không có gì để bừa bộn. Tôi sợ những thứ thừa thãi. Tôi sợ chúng trở thành lý do. Tôi ngồi trên giường, nghe nhạc rất nhỏ qua tai nghe, như thể âm thanh cũng có thể bị phát hiện và trừng phạt.
+
+Ở trường, tôi thay đổi. Tôi ít nói hơn, nhưng trong đầu thì ồn ào hơn bao giờ hết. Những câu hỏi không có lời đáp cứ xoay vòng: Nếu mình khác đi thì sao? Nếu mình biến mất thì sao? Tôi không muốn chết. Tôi chỉ muốn yên. Nhưng sự yên tĩnh thật sự chưa bao giờ tồn tại trong đời tôi.
+
+Mẹ tôi ngày càng gầy. Tôi để ý thấy bà hay thở dài khi nghĩ rằng tôi không nhìn. Bà vẫn không nói gì, nhưng sự im lặng của bà lúc này không còn là che chở, mà là một bức tường mỏng manh sắp sụp. Có lần, tôi nghe thấy bà khóc trong bếp, rất nhỏ. Tôi đứng ngoài cửa, không dám bước vào. Tôi sợ nếu mình xuất hiện, bà sẽ phải nuốt nước mắt trở lại, như tôi đã học cách làm từ lâu.
+
+Tôi bắt đầu viết. Không phải nhật ký, mà là những mẩu giấy rời, những câu không đầu không cuối. Tôi viết để giữ lại phần nào đó của mình mà bố không chạm tới được. Trong chữ viết, tôi cho phép mình tức giận, sợ hãi, thậm chí căm ghét. Những cảm xúc đó không được phép tồn tại ngoài đời, nhưng trên giấy, chúng thở được.
+
+Có một lần, bố phát hiện ra một tờ giấy. Chỉ là vài dòng nguệch ngoạc, không nói rõ ai, không nói rõ chuyện gì. Nhưng ông hiểu, hoặc nghĩ rằng ông hiểu. Đêm đó, tôi học thêm một bài học: ngay cả suy nghĩ của bạn cũng có thể là tội lỗi, nếu nó không phục tùng.
+
+Sau chuyện đó, tôi đốt hết những gì mình viết. Ngọn lửa nhỏ, nhưng cảm giác mất mát thì rất lớn. Tôi nhìn giấy cháy thành tro và nghĩ: Có lẽ mình cũng sẽ biến mất như thế, từng chút một.
+
+Bạn bè bắt đầu để ý thấy tôi khác đi. Có người hỏi han, có người tò mò. Tôi cười cho qua. Tôi trở nên giỏi che giấu đến mức chính tôi cũng không chắc mình đang giấu ai. Có những ngày, tôi đứng trước gương rất lâu, cố tìm xem mình là ai, ngoài một đứa con luôn làm sai.
+
+Bố tôi không cần đánh nhiều như trước. Lời nói của ông đã đủ. Chúng bám vào tôi, lặp lại trong đầu tôi mỗi khi tôi mắc một lỗi nhỏ. Tôi bắt đầu tự nói với mình bằng giọng của ông. Tôi tự trách, tự hạ thấp, tự trừng phạt bằng sự im lặng và cô lập.
+
+Tuổi dậy thì được người ta nói là thời gian nổi loạn. Với tôi, đó là thời gian những vết nứt xuất hiện – không ồn ào, không ai thấy, nhưng lan rộng âm thầm. Tôi chưa vỡ ra. Tôi chỉ đang chuẩn bị cho một điều gì đó tồi tệ hơn.
+
+Và tôi biết, sâu trong lòng mình, rằng sự chịu đựng không thể kéo dài mãi mà không để lại hậu quả.</p>
+  </div>
+  <div class="blood-line">… CỬA NHÀ ĐÓNG SẬP …</div>
+</div>
+
+<div id="c5" class="chapter">
+  <h2 class="chap-title">CHƯƠNG 5: GIẤC MƠ RỜI ĐI KHÔNG CÓ ĐÍCH ĐẾN</h2>
+  <div class="content">
+    <p>Cấp ba đến như một cánh cửa hẹp. Tôi bước qua với một niềm hy vọng rất nhỏ: chỉ cần học xa nhà hơn một chút, chỉ cần về muộn hơn một chút, chỉ cần có thêm vài giờ không phải đối diện với bố. Hy vọng ấy mong manh đến mức tôi không dám gọi tên, sợ rằng chỉ cần nghĩ đến thôi cũng sẽ làm nó vỡ ra.
+
+Áp lực học tập tăng lên, nhưng với tôi, nó vẫn dễ thở hơn không khí trong nhà. Tôi lao vào học như một cách trốn chạy. Điểm số trở thành cái cớ hợp pháp để tôi ở lại trường muộn, tham gia thêm lớp học thêm, ngồi lì trong thư viện cho đến khi trời tối hẳn. Tôi thích khoảnh khắc bước ra khỏi cổng trường, dù biết rằng con đường phía trước vẫn dẫn về cùng một nơi.
+
+Bố tôi coi thành tích của tôi như một thứ hiển nhiên. Ông không khen, cũng không hài lòng. Điểm cao là nghĩa vụ. Điểm thấp là tội lỗi. Mỗi lần tôi mang giấy khen về nhà, ông chỉ liếc qua, rồi đặt xuống bàn, như thể đó là thứ không đáng để ý. Nhưng chỉ cần một con số lệch đi, cả bầu không khí lập tức đổi khác.
+
+Tôi bắt đầu mơ về việc rời đi. Không phải là những giấc mơ lớn lao – không có thành phố mới, không có tự do rực rỡ. Tôi chỉ mơ về một căn phòng nhỏ, nơi tôi có thể đóng cửa mà không phải sợ tiếng bước chân phía ngoài. Một nơi tôi có thể làm rơi đồ mà không phải xin lỗi. Một nơi tôi có thể thở.
+
+Nhưng mơ thôi thì không đủ. Tôi không có tiền. Tôi không có người lớn đứng về phía mình. Mẹ tôi ngày càng yếu, cả về thể chất lẫn tinh thần. Bà tránh ánh mắt tôi nhiều hơn, như thể sợ tôi nhìn thấy sự bất lực của bà. Có những tối, tôi nghe bố trách mẹ vì đã “nuôi dạy con không ra gì”. Tôi đứng trong phòng, tay nắm chặt, nhưng không bước ra. Tôi ghét chính mình vì điều đó.
+
+Ở trường, tôi bắt đầu có những suy nghĩ đáng sợ. Không phải là muốn chết, mà là muốn biến mất. Muốn mọi thứ dừng lại. Muốn không phải thức dậy mỗi sáng với cảm giác nặng trĩu trong ngực. Tôi tự hỏi liệu có ai nhận ra nếu một ngày tôi không còn nữa. Câu hỏi ấy không có câu trả lời, nhưng nó bám lấy tôi dai dẳng.
+
+Tôi thử tìm sự giúp đỡ theo cách an toàn nhất mà tôi biết: nói bóng gió. Tôi nói với một cô giáo rằng tôi thấy mệt, rằng tôi khó tập trung. Cô khuyên tôi nghỉ ngơi nhiều hơn, cố gắng cân bằng. Tôi gật đầu, cảm ơn. Tôi không nói thêm. Tôi không biết phải nói thế nào để người khác hiểu mà không làm mọi thứ tệ hơn.
+
+Bố tôi bắt đầu so sánh tôi với người khác. Con nhà người ta ngoan hơn. Con nhà người ta biết điều hơn. Con nhà người ta không làm ông mất mặt. Mỗi câu nói là một nhát cắt nhỏ, không chảy máu, nhưng sâu. Tôi bắt đầu tin rằng mình thật sự là một gánh nặng, rằng nếu không có tôi, mọi người sẽ nhẹ nhõm hơn.
+
+Có một đêm, tôi đứng rất lâu ngoài ban công. Gió lạnh, nhưng đầu tôi trống rỗng một cách kỳ lạ. Tôi không định làm gì cả. Tôi chỉ đứng đó để cảm nhận một khoảnh khắc không có ai ra lệnh cho tôi phải thế này hay thế kia. Cuối cùng tôi quay vào. Tôi nghĩ: Chưa phải bây giờ. Nhưng ý nghĩ đó đã xuất hiện, và tôi biết nó sẽ còn quay lại.
+
+Giấc mơ rời đi của tôi ngày càng rõ, nhưng con đường thì mờ mịt. Tôi học ngày học đêm, như thể chỉ cần cố thêm chút nữa, tương lai sẽ mở ra. Nhưng mỗi lần nhìn bố, tôi lại thấy quá khứ kéo tôi trở lại, nhắc nhở rằng có những thứ không dễ gì thoát khỏi.
+
+Cấp ba trôi qua trong trạng thái lơ lửng. Tôi không còn là đứa trẻ hoàn toàn bất lực, nhưng cũng chưa đủ mạnh để tự cứu mình. Tôi đứng giữa hai bờ đó, kiệt sức, mang theo một giấc mơ chưa kịp có hình dạng.
+
+Và tôi không biết rằng, những năm tiếp theo sẽ dạy tôi một điều tàn nhẫn: không phải ai rời khỏi nhà cũng thật sự thoát đi.</p>
+  </div>
+  <div class="blood-line">… SỰ ĐAU KHỔ …</div>
+</div>
+
+<div id="c6" class="chapter">
+  <h2 class="chap-title">CHƯƠNG 6: RỜI ĐI NHƯNG KHÔNG THOÁT</h2>
+  <div class="content">
+    <p>Tôi rời nhà năm mười tám tuổi, mang theo một chiếc balô cũ và cảm giác trống rỗng mà tôi không gọi tên được. Ngày đi, bố không tiễn. Ông chỉ đứng ở cửa, khoanh tay, nói một câu rất nhẹ: “Ra ngoài rồi thì tự lo lấy thân.” Tôi gật đầu. Tôi đã quen với việc không được giữ lại.
+
+Chuyến xe rời bến, tôi nhìn qua cửa kính thấy ngôi nhà nhỏ dần. Tôi chờ đợi một cảm giác gì đó—nhẹ nhõm, vui mừng, hay ít nhất là tự do. Nhưng không có gì đến cả. Chỉ có một khoảng lặng dài, như thể cơ thể tôi chưa kịp hiểu rằng mình đã đi xa rồi.
+
+Cuộc sống xa nhà không giống giấc mơ. Tôi ở trọ trong một căn phòng chật, tường mỏng, ban đêm nghe rõ tiếng người khác nói chuyện. Mỗi tiếng động bất ngờ đều khiến tôi giật mình. Tôi vẫn khóa cửa rất kỹ, vẫn để đồ đạc gọn gàng đến mức ám ảnh. Tôi nhận ra mình đã mang theo ngôi nhà đó đi cùng, giấu nó trong phản xạ, trong nỗi sợ vô hình.
+
+Ở trường đại học, mọi người nói về tự do, về những lựa chọn. Tôi ngồi nghe mà thấy xa lạ. Tôi không biết chọn gì cho bản thân. Tôi quen với việc được bảo phải làm gì, dù mệnh lệnh đó làm tôi đau. Khi không có ai ra lệnh, tôi hoang mang. Tôi sợ quyết định sai, sợ bị trách, dù chẳng còn ai ở đó để làm điều ấy.
+
+Tôi làm thêm đủ thứ việc để không phải ở yên. Bận rộn giúp tôi không nghĩ. Nhưng mỗi khi đêm xuống, sự im lặng lại tràn về. Trong im lặng đó, giọng nói của bố vang lên rất rõ, như thể ông đang ngồi ngay sau lưng tôi. Tôi tự mắng mình vì những lỗi nhỏ nhặt, tự hạ thấp mình trước cả khi người khác kịp làm vậy.
+
+Tôi thử xây dựng các mối quan hệ. Nhưng tôi không biết cách tin ai. Khi ai đó lớn tiếng, tim tôi đập loạn. Khi ai đó im lặng, tôi hoảng sợ hơn. Tôi luôn chờ đợi một cú đánh vô hình, một sự thay đổi đột ngột. Có người nói tôi lạnh lùng. Thật ra, tôi chỉ đang co mình lại để sống sót.
+
+Mẹ gọi cho tôi thỉnh thoảng. Giọng bà yếu hơn trước. Bà hỏi tôi có ổn không. Tôi nói ổn. Chúng tôi nói chuyện như hai người xa lạ cùng giữ một bí mật chung. Tôi không hỏi về bố. Tôi sợ chỉ cần nghe tên ông, mọi thứ tôi cố dựng lên sẽ sụp đổ.
+
+Có lần tôi về thăm nhà. Chỉ một ngày. Bước chân vào cửa, cơ thể tôi phản ứng trước cả khi đầu óc kịp nghĩ. Tôi nhỏ lại, im lặng lại, cẩn thận từng cử động. Bố vẫn vậy. Ông không cần làm gì nhiều. Sự hiện diện của ông đã đủ để tôi quay về phiên bản cũ của mình. Tôi rời đi hôm sau, kiệt sức như vừa trải qua một cơn bệnh dài.
+
+Tôi bắt đầu nhận ra: rời khỏi nơi đó không có nghĩa là thoát. Hai mươi năm sống trong sợ hãi đã dạy cơ thể tôi những bài học mà lý trí không dễ xóa. Tôi có thể đi rất xa, nhưng chỉ cần một ánh mắt gắt gỏng, một giọng nói nặng nề, tôi lại trở về làm đứa trẻ đứng im trong bếp, tay run rẩy, chờ đợi.
+
+Có những đêm, tôi ngồi một mình và tự hỏi: nếu không có tất cả những điều đó, tôi sẽ là ai? Câu hỏi ấy làm tôi đau hơn cả ký ức. Vì tôi không có câu trả lời. Tôi được tạo hình quá lâu bởi bạo lực và sợ hãi, đến mức không chắc phần nào trong tôi là thật.
+
+Tuổi trưởng thành của tôi bắt đầu như thế: không ồn ào, không giải phóng. Chỉ là một chuỗi ngày cố gắng tỏ ra bình thường, trong khi bên trong, tôi vẫn đang mắc kẹt. Và tôi dần hiểu rằng, có những vết thương không cần bị chạm vào nữa—chúng tự nhắc bạn rằng chúng vẫn còn đó, mỗi ngày.</p>
+  </div>
+  <div class="blood-line">… BỊ GIAM CẦM …</div>
+</div>
+
+<div id="c7" class="chapter">
+  <h2 class="chap-title">CHƯƠNG 7: NHỮNG NGƯỜI ĐẾN RỒI ĐI</h2>
+  <div class="content">
+    <p>Tôi bước vào các mối quan hệ giống như bước trên băng mỏng. Lúc nào cũng cẩn thận, lúc nào cũng chuẩn bị tinh thần cho việc rơi xuống. Tôi không nói ra quá nhiều, không đòi hỏi, không làm phiền. Tôi nghĩ đó là cách an toàn nhất để ở lại. Nhưng hóa ra, đó cũng là cách nhanh nhất để bị bỏ quên.
+
+Người ta thường nói tôi khó gần. Có người bảo tôi lạnh. Tôi nghe và gật đầu, vì giải thích mệt lắm. Làm sao tôi có thể nói rằng tôi không biết cách ở gần mà không sợ? Rằng mỗi khi ai đó quan tâm quá mức, tôi lại căng thẳng, như thể sắp phải trả giá cho sự quan tâm ấy bằng một điều gì đó đau đớn?
+
+Tôi từng yêu. Ít nhất tôi nghĩ đó là yêu. Người đó kiên nhẫn, dịu dàng, và thường hỏi tôi những câu đơn giản: “Bạn có ổn không?”, “Bạn nghĩ gì thế?” Những câu hỏi ấy làm tôi lúng túng. Tôi không quen với việc được hỏi ý kiến. Tôi trả lời qua loa, né tránh, đổi chủ đề. Tôi sợ nếu mình nói thật, mọi thứ sẽ trở nên nặng nề, và rồi họ cũng sẽ rời đi.
+
+Và họ đã rời đi. Không ồn ào. Không trách móc. Chỉ là dần dần biến mất. Tôi không níu kéo. Một phần trong tôi đã chuẩn bị cho khoảnh khắc đó từ rất lâu rồi. Tôi tự nhủ: Thấy chưa, ở một mình vẫn an toàn hơn.
+
+Nhưng an toàn không đồng nghĩa với bớt đau.
+
+Những mối quan hệ bạn bè cũng trôi tuột khỏi tay tôi theo cách tương tự. Tôi luôn là người lắng nghe, người gật đầu, người không gây rắc rối. Nhưng khi đến lượt tôi cần ai đó, tôi không biết mở miệng. Tôi không biết làm thế nào để nói rằng mình đang mệt, rằng có những ngày tôi không muốn tồn tại. Tôi sợ nếu nói ra, họ sẽ nhìn tôi bằng ánh mắt khác—ánh mắt thương hại, hoặc tệ hơn, ánh mắt khó chịu.
+
+Tôi bắt đầu thu mình lại. Ít ra ngoài hơn. Ít trả lời tin nhắn hơn. Tôi nói với mọi người rằng mình bận, rằng mình ổn. Thật ra tôi chỉ không còn đủ năng lượng để đóng vai một người bình thường. Căn phòng trọ trở thành thế giới của tôi. Nhỏ, kín, yên tĩnh. Ở đó, tôi không phải giải thích vì sao mình im lặng.
+
+Có những tối tôi ngồi rất lâu, không làm gì cả. Không xem điện thoại. Không đọc sách. Chỉ ngồi và để suy nghĩ chạy vòng vòng. Tôi nghĩ về bố. Tôi ghét việc ông vẫn còn ảnh hưởng đến tôi, ngay cả khi tôi không còn ở đó. Tôi ghét việc mình vẫn sợ những người đàn ông lớn tiếng. Tôi ghét việc mình không biết cách tin rằng ai đó sẽ không làm tổn thương tôi.
+
+Mẹ gọi ngày càng ít. Khi gọi, bà nói nhiều về những chuyện nhỏ nhặt, như thể cố lấp đầy khoảng trống. Tôi nghe và đáp lại máy móc. Có những lúc tôi muốn hỏi: Sao mẹ không đưa con đi? Nhưng câu hỏi đó kẹt lại trong cổ họng. Quá muộn rồi. Hai mươi năm đã trôi qua. Có những điều hỏi ra cũng không còn ý nghĩa.
+
+Tôi nhận ra mình đang dần biến mất khỏi cuộc sống của người khác. Không phải bằng một cú sốc, mà bằng sự rút lui chậm rãi. Không ai để ý nhiều. Không ai ngăn lại. Điều đó vừa đau, vừa quen thuộc. Cảm giác này giống hệt những năm tôi còn ở nhà: tồn tại, nhưng không thực sự được thấy.
+
+Có những đêm, tôi nằm nghĩ: Nếu mình biến mất thật thì sao? Ý nghĩ ấy không còn làm tôi hoảng loạn như trước. Nó đến rất bình thản, như một phương án cuối cùng luôn đặt sẵn trên bàn. Tôi không hành động. Nhưng tôi cũng không xua nó đi. Tôi để nó ở đó, như một người bạn u ám nhưng trung thành.
+
+Sự cô lập không đến ngay lập tức. Nó tích tụ, từng chút một, qua mỗi cuộc trò chuyện dang dở, mỗi mối quan hệ không trọn vẹn. Đến khi tôi nhận ra, xung quanh tôi đã trống trải đến mức đáng sợ. Không ai biết tôi thực sự là ai. Có lẽ ngay cả tôi cũng không biết nữa.
+
+Và trong khoảng trống ấy, những ký ức cũ bắt đầu trồi lên rõ ràng hơn bao giờ hết. Không còn tiếng ồn của cuộc sống để che lấp. Không còn ai để phân tâm. Chỉ còn tôi, và quá khứ vẫn chưa chịu buông tha.</p>
+  </div>
+  <div class="blood-line">… TÌNH CẢM RẮC RỐI …</div>
+</div>
+
+<div id="c8" class="chapter">
+  <h2 class="chap-title">CHƯƠNG 8: KHI CƠ THỂ KHÔNG CÒN NGHE LỜI</h2>
+  <div class="content">
+    <p>Tôi bắt đầu mất ngủ một cách nghiêm túc vào khoảng năm hai mươi lăm tuổi. Không phải kiểu trằn trọc rồi ngủ bù được, mà là những đêm nằm im, mắt mở trừng trừng, cơ thể mệt rã nhưng đầu óc không chịu tắt. Ký ức tràn lên không báo trước. Những câu nói cũ, những ánh mắt cũ, những khoảnh khắc tôi tưởng mình đã quên từ lâu.
+
+Ban ngày, tôi vẫn đi làm. Tôi hoàn thành công việc, trả lời email, gật đầu đúng lúc. Không ai nhận ra có gì sai. Nhưng cơ thể tôi bắt đầu phản bội tôi theo những cách nhỏ nhặt: tim đập nhanh không lý do, tay run khi nghe tiếng lớn, dạ dày đau âm ỉ. Bác sĩ nói tôi căng thẳng, khuyên nghỉ ngơi. Tôi gật đầu. Tôi không biết nghỉ ngơi là gì.
+
+Tôi bắt đầu sợ những không gian kín. Thang máy. Phòng họp. Những nơi có cửa đóng. Mỗi khi ở đó, ngực tôi thắt lại, hơi thở ngắn dần, mồ hôi túa ra dù trời lạnh. Tôi đứng giữa đám đông mà cảm thấy mình sắp tan ra. Tôi không hiểu vì sao. Tôi chỉ biết rằng cơ thể tôi đang nhớ thay cho tôi.
+
+Có lần, sếp lớn tiếng trong một cuộc họp. Không phải với tôi. Chỉ là một câu quát vì công việc. Nhưng tôi đông cứng lại. Mọi âm thanh như bị bóp méo. Tôi không nghe được gì ngoài giọng nói đó, chồng lên giọng nói của bố năm xưa. Tôi xin phép ra ngoài, vào nhà vệ sinh, khóa cửa lại và ngồi xuống sàn. Tôi không khóc. Tôi chỉ run.
+
+Sau hôm đó, tôi bắt đầu tránh né. Tránh họp. Tránh đối diện. Tránh mọi thứ có thể kích hoạt cơn hoảng loạn. Thế giới của tôi thu hẹp lại thêm một chút. Tôi nói dối rằng mình ốm. Một phần trong tôi biết mình đang trượt dài, nhưng phần còn lại quá mệt để kéo lại.
+
+Tôi cũng bắt đầu quên. Quên những việc đơn giản. Quên mình đã ăn chưa. Quên ngày tháng. Trí nhớ tôi như một tấm vải cũ, rách chỗ này chỗ kia. Nhưng những ký ức tôi muốn quên thì vẫn ở đó, sắc nét, không phai.
+
+Có những buổi tối tôi ngồi trên giường, nhìn vào khoảng không trước mặt hàng giờ. Điện thoại nằm bên cạnh, nhưng tôi không mở. Tôi không biết gọi cho ai. Tôi không muốn trở thành gánh nặng. Ý nghĩ đó quen thuộc đến mức tôi không còn nghi ngờ nó nữa.
+
+Tôi thử tìm sự giúp đỡ lần nữa. Tôi ngồi trước một nhà tư vấn tâm lý, trả lời những câu hỏi rất bình thường. “Tuổi thơ của bạn thế nào?” Tôi mỉm cười, nói rằng cũng ổn. Miệng tôi nói dối một cách trơn tru, trong khi cơ thể căng cứng. Tôi không quay lại sau buổi đó. Tôi sợ chỉ cần nói ra hết, tôi sẽ vỡ.
+
+Những ngày tệ nhất, tôi không ra khỏi giường. Tôi nhìn trần nhà và đếm các vết nứt. Tôi nghĩ về hai mươi năm đã trôi qua, và nhận ra mình chưa từng có một ngày thật sự nghỉ ngơi. Ngay cả bây giờ, khi bố không còn ở trước mặt, tôi vẫn đang sống theo luật của ông: im lặng, chịu đựng, không làm phiền.
+
+Ý nghĩ biến mất quay lại thường xuyên hơn. Không dữ dội. Không kịch tính. Chỉ là một suy nghĩ lặng lẽ: Nếu mọi thứ dừng lại thì sao? Tôi không lên kế hoạch. Tôi chỉ thấy ý nghĩ đó như một cánh cửa luôn hé mở. Biết là có đó thôi cũng đã đủ để tôi tiếp tục chịu đựng thêm một ngày nữa.
+
+Mẹ gọi cho tôi vào một buổi tối muộn. Bà nói bố yếu rồi. Giọng bà đều đều, như đọc một bản tin. Tôi nghe mà không thấy gì cả. Không buồn. Không thương. Chỉ trống rỗng. Tôi nhận ra mình đã cạn cảm xúc từ lúc nào không hay.
+
+Sau cuộc gọi đó, tôi ngồi rất lâu trong bóng tối. Tôi nghĩ: Có lẽ mọi thứ sắp kết thúc. Nhưng thay vì nhẹ nhõm, tôi chỉ thấy mệt hơn. Vì tôi hiểu rằng, ngay cả khi ông biến mất, những gì ông để lại trong tôi vẫn còn nguyên.
+
+Cơ thể tôi tiếp tục lên tiếng theo cách riêng của nó. Và tôi, lần đầu tiên, bắt đầu nghi ngờ rằng mình có thể không chịu đựng thêm được nữa.</p>
+  </div>
+  <div class="blood-line">… SỰ THẬT ĐEN TỐI …</div>
+</div>
+
+<div id="c9" class="chapter">
+  <h2 class="chap-title">CHƯƠNG 9: LẦN ĐỐI DIỆN CUỐI CÙNG</h2>
+  <div class="content">
+    <p>Tôi trở về nhà khi bố nhập viện. Không ai yêu cầu tôi phải về, nhưng mẹ nói một câu rất khẽ: “Nếu con không về, sau này con sẽ ân hận.” Tôi không chắc mình còn biết ân hận là gì, nhưng tôi vẫn lên xe. Có những sợi dây dù mục nát vẫn kéo người ta quay lại.
+
+Hành lang bệnh viện dài và trắng. Mùi thuốc sát trùng làm tôi buồn nôn. Tôi đi chậm, như thể chỉ cần bước nhanh hơn một chút, quá khứ sẽ ập đến ngay trước mặt. Khi đứng trước cửa phòng bệnh, tay tôi dừng lại rất lâu. Cơ thể tôi phản ứng quen thuộc: tim đập nhanh, vai căng cứng, hơi thở nông. Tôi tự nhủ mình đã lớn rồi. Nhưng cơ thể tôi không tin.
+
+Bố nằm trên giường, gầy hơn tôi nhớ. Ống truyền cắm vào tay, mắt nhắm hờ. Ông trông nhỏ lại, yếu đi, không còn giống người đã chiếm trọn nỗi sợ của tôi suốt hai mươi năm. Khoảnh khắc đó, tôi chờ đợi một cảm xúc gì đó trỗi dậy—thương hại, giận dữ, hay nhẹ nhõm. Nhưng không có gì cả. Chỉ là một khoảng trống lạnh.
+
+Mẹ đứng cạnh giường, lưng còng xuống. Bà nhìn tôi, ánh mắt pha lẫn hy vọng và lo sợ. Tôi biết bà đang mong điều gì: một lời nói, một cử chỉ, một sự hòa giải muộn màng. Tôi nhìn lại bố. Ông mở mắt, nhìn tôi rất lâu. Ánh mắt đó vẫn quen thuộc—không dịu dàng, không xin lỗi, chỉ là một sự dò xét mệt mỏi.
+
+“Về rồi à,” ông nói.
+
+Tôi gật đầu. Tôi không biết phải nói gì thêm. Trong đầu tôi có hàng trăm câu, nhưng câu nào cũng mắc kẹt. Tôi từng tưởng tượng khoảnh khắc này nhiều lần: tôi sẽ nói ra tất cả, sẽ hỏi tại sao, sẽ buộc ông phải nhìn nhận những gì đã làm. Nhưng khi đứng đây, tôi chỉ thấy mệt. Mệt đến mức không còn sức để đòi công lý.
+
+Ông nhìn tôi, khẽ nhíu mày. “Ra ngoài sống ổn không?”
+Câu hỏi đó đến muộn hai mươi năm. Tôi mất vài giây để hiểu. Tôi trả lời: “Ổn.”
+
+Đó là lời nói dối quen thuộc nhất đời tôi. Tôi nói nó nhẹ tênh, không run, không nghẹn. Tôi nhận ra mình đã luyện tập câu này quá lâu rồi.
+
+Không có lời xin lỗi. Không có thừa nhận. Ông quay mặt đi, như thể cuộc trò chuyện đã xong. Tôi đứng đó thêm vài phút, rồi bước ra ngoài. Hành lang vẫn trắng, vẫn dài. Tôi dựa lưng vào tường và nhận ra tay mình đang run. Không phải vì giận. Mà vì thất vọng. Một sự thất vọng lặng lẽ, sâu đến mức không còn đau nhói nữa.
+
+Bố mất hai tuần sau đó. Mẹ gọi cho tôi vào buổi sáng sớm. Bà khóc, còn tôi thì không. Tôi nghe mình nói những câu cần nói, sắp xếp những việc cần làm, như một cái máy. Trong đám tang, tôi đứng giữa họ hàng, nghe người ta nói ông là người nghiêm khắc, là trụ cột gia đình. Tôi cúi đầu. Tôi không phản bác. Tôi không còn sức để giải thích sự thật của mình.
+
+Khi mọi thứ kết thúc, mọi người ra về, tôi đứng lại một mình rất lâu. Tôi chờ đợi một cảm giác giải thoát. Người ta vẫn nói cái chết có thể khép lại quá khứ. Nhưng trong tôi, không có cánh cửa nào đóng lại cả. Chỉ có một sự im lặng khác, rộng hơn, lạnh hơn.
+
+Tối đó, tôi về lại căn phòng trọ. Tôi ngồi xuống giường và nhận ra mình không biết phải làm gì tiếp theo. Kẻ đã tạo ra nỗi sợ trong tôi đã không còn. Nhưng nỗi sợ thì vẫn ở đây. Nó không cần ông nữa. Nó đã trở thành một phần của tôi.
+
+Tôi nghĩ: Vậy là xong rồi. Nhưng “xong” không mang nghĩa kết thúc. Nó chỉ mang nghĩa rằng không còn ai để đối diện nữa. Không còn ai để trách. Không còn hy vọng mong manh rằng một ngày nào đó, ông sẽ thay đổi.
+
+Hai mươi năm đã khép lại theo cách đó—không cao trào, không chuộc lỗi. Chỉ là một dấu chấm lạnh lùng. Và tôi, đứng trước dấu chấm ấy, nhận ra mình không biết bắt đầu một câu mới như thế nào.</p>
+  </div>
+  <div class="blood-line">… NGÀY CUỐI CÙNG …</div>
+</div>
+
+<div id="c10" class="chapter">
+  <h2 class="chap-title">CHƯƠNG 10: KẾT THÚC KHÔNG CÓ LỐI RA</h2>
+  <div class="content">
+    <p>Sau đám tang của bố, cuộc sống của tôi tiếp tục theo quán tính. Tôi vẫn đi làm, vẫn trả lời tin nhắn công việc, vẫn gật đầu khi người khác hỏi han. Mọi thứ trông có vẻ ổn từ bên ngoài. Nhưng bên trong, có một thứ gì đó đã ngừng chuyển động. Như một cỗ máy chạy quá lâu, cuối cùng cũng mòn đến mức không thể sửa.
+
+Tôi từng nghĩ khi ông không còn nữa, ký ức sẽ yếu đi. Nhưng hóa ra, quá khứ không cần người tạo ra nó để tồn tại. Nó ở trong cách tôi giật mình khi nghe tiếng động lớn. Trong thói quen xin lỗi vô thức. Trong những đêm tôi nằm im, tim đập đều đều nhưng không cảm thấy mình đang sống.
+
+Tôi bắt đầu bỏ bữa. Không phải cố ý. Chỉ là không thấy đói. Cơ thể tôi nhẹ dần, nhưng không theo cách dễ chịu. Mỗi sáng thức dậy là một nỗ lực. Tôi nhìn trần nhà và tự hỏi mình đang đứng dậy vì điều gì. Câu trả lời không bao giờ đến.
+
+Mẹ gọi cho tôi thường xuyên hơn sau khi bố mất. Bà nói nhiều, như thể sợ sự im lặng sẽ nuốt chửng cả hai. Tôi nghe, đáp lại ngắn gọn. Có những lúc bà hỏi: “Con có ổn không?” Tôi lại nói ổn. Tôi không biết nói gì khác. Tôi không muốn bà mang thêm một nỗi đau nữa. Tôi đã quen với việc gánh mọi thứ một mình.
+
+Tôi thử thay đổi. Thử đi xa, thử gặp người mới, thử làm lại từ đầu. Nhưng dù ở đâu, tôi vẫn mang theo cùng một cái bóng. Nó không đuổi theo tôi. Nó ở sẵn đó, chờ tôi quay lại nhìn. Tôi nhận ra mình chưa từng học cách sống cho bản thân. Tôi chỉ học cách tồn tại trong sợ hãi, và khi sợ hãi không còn hình dạng cụ thể, tôi không biết phải làm gì với tự do.
+
+Những đêm mất ngủ trở nên dày hơn. Tôi không còn phân biệt được ngày và đêm rõ ràng. Thời gian chảy qua tôi mà không để lại dấu vết. Tôi dần ngừng liên lạc với mọi người. Không phải vì họ làm gì sai, mà vì tôi không còn năng lượng để giữ kết nối. Sự cô độc lúc này không còn đau nhói. Nó trở thành trạng thái tự nhiên, như hơi thở.
+
+Có một buổi sáng, tôi thức dậy và nhận ra mình đã quên cảm giác hy vọng là gì. Không phải là tuyệt vọng dữ dội, mà là một khoảng trống tuyệt đối. Tôi ngồi rất lâu bên cửa sổ, nhìn thành phố thức dậy. Mọi người vội vã, có đích đến, có lý do. Tôi thì không.
+
+Tôi không để lại thư. Không phải vì không có điều muốn nói, mà vì tôi đã nói tất cả trong im lặng suốt hai mươi năm. Cơ thể tôi, cuối cùng, cũng dừng lại trước khi tâm trí kịp tìm ra một con đường khác. Không có bi kịch ồn ào. Chỉ là một sự mệt mỏi kéo dài đến mức không thể gượng thêm được nữa.
+
+Người ta nói tôi ra đi vì suy kiệt. Một cách nói nhẹ nhàng, dễ chấp nhận. Không ai nhắc đến quá khứ. Không ai thấy được những vết thương không để lại sẹo ngoài da. Tôi trở thành một cái tên trong trí nhớ của vài người, rồi dần phai đi.
+
+Nếu có điều gì còn sót lại, thì đó không phải là oán hận. Cũng không phải tha thứ. Chỉ là một sự thật trần trụi: có những đứa trẻ lớn lên mà không bao giờ được trao cho công cụ để sống. Và khi chúng lớn lên, thế giới mong chúng tự biết cách vá lại những gì đã vỡ, dù chúng chưa từng được dạy thế nào là lành lặn.
+
+Câu chuyện của tôi kết thúc ở đó. Không phải vì tôi yếu đuối, mà vì tôi đã chiến đấu quá lâu mà không có nơi nghỉ ngơi. Quá khứ không giết tôi trong một ngày. Nó làm tôi mòn đi, từng chút một, cho đến khi không còn gì để giữ lại.
+
+Và có lẽ, bi kịch lớn nhất không phải là cái chết của tôi —
+mà là việc suốt hai mươi năm, không ai thực sự thấy tôi đã cần được cứu đến nhường nào.</p>
+  </div>
+  <div class="blood-line">… BỊ QUÁ KHỨ GIAM CẦM,KHÔNG THỂ THOÁT RA KHỎI KÝ ỨC ĐÁNG SỢ  …</div>
+</div>
+
+<script>
+  let current = 1;
+  const total = 10;
+  function show(n) {
+    document.querySelectorAll('.chapter').forEach(el => el.classList.remove('active'));
+    document.getElementById(`c${n}`).classList.add('active');
+    current = n;
+    document.getElementById('chapNum').innerText = `CHƯƠNG ${n} / ${total}`;
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+  function nextChap() { if (current < total) show(current + 1); }
+  function prevChap() { if (current > 1) show(current - 1); }
+  show(1);
+</script>
+
+</body>
+</html>
